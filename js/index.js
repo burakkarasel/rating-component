@@ -17,7 +17,13 @@ ratingsDOM.addEventListener("click", (e) => {
   ) {
     rating.style.backgroundColor = "hsl(214, 18%, 27%)";
     e.target.style.backgroundColor = "hsl(25, 97%, 53%)";
-  } else {
+  } else if (
+    e.target.innerHTML === "5" ||
+    e.target.innerHTML === "4" ||
+    e.target.innerHTML === "3" ||
+    e.target.innerHTML === "2" ||
+    e.target.innerHTML === "1"
+  ) {
     e.target.style.backgroundColor = "hsl(25, 97%, 53%)";
   }
   rating = e.target;
