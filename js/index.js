@@ -7,23 +7,10 @@ const ratingContainer = document.getElementById("rating-container");
 let rating;
 
 ratingsDOM.addEventListener("click", (e) => {
-  if (
-    (e.target.innerHTML === "5" ||
-      e.target.innerHTML === "4" ||
-      e.target.innerHTML === "3" ||
-      e.target.innerHTML === "2" ||
-      e.target.innerHTML === "1") &&
-    rating
-  ) {
+  if (rating) {
     rating.style.backgroundColor = "hsl(214, 18%, 27%)";
     e.target.style.backgroundColor = "hsl(25, 97%, 53%)";
-  } else if (
-    e.target.innerHTML === "5" ||
-    e.target.innerHTML === "4" ||
-    e.target.innerHTML === "3" ||
-    e.target.innerHTML === "2" ||
-    e.target.innerHTML === "1"
-  ) {
+  } else {
     e.target.style.backgroundColor = "hsl(25, 97%, 53%)";
   }
   rating = e.target;
